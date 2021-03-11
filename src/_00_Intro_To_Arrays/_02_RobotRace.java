@@ -2,19 +2,28 @@ package _00_Intro_To_Arrays;
 
 import java.util.Random;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import org.jointheleague.graphical.robot.Robot;
 
 public class _02_RobotRace {
     // 1. make a main method
-
+	JFrame frame=new JFrame();
+public static void main(String[] args) {
+	
+	Robot[] robots=new Robot[5];
+	for(int i=0; i<robots.length; i++) {
+		robots[i]=new Robot();
+	}
+}
         // 2. create an array of 5 robots.
 
         // 3. use a for loop to initialize the robots.
 
         // 4. make each robot start at the bottom of the screen, side by side, facing up
-    
+    //I AM ON THIS, IDK REALLY KNOW HOW TO DO THIS, I MADE A FRAME AT THE TOP BUT IDK 
+//HOW TO MAKE THE ROBOTS AND DRAW THEM AND STUFF
         // 5. use another for loop to iterate through the array and make each robot move
         // a random amount less than 50.
     
