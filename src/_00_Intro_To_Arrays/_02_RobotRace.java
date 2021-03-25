@@ -29,7 +29,7 @@ public static void main(String[] args) {
 		robots[i].turn(30);
 		if(robots[i].getY()==300&&robots[i].getX()==i*150+50) {
 			stillPlaying=false;
-			JOptionPane.showMessageDialog(null, "Robot "+ i+1 +" wins!!");
+			JOptionPane.showMessageDialog(null, "Robot "+ (i+1) +" wins!!");
 		}
 		}
 		}
