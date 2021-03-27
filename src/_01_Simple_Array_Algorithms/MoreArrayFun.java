@@ -1,5 +1,8 @@
 package _01_Simple_Array_Algorithms;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class MoreArrayFun {
@@ -12,9 +15,10 @@ public class MoreArrayFun {
 			strings[3]="Helooooo";
 			strings[4]="Gday";
 			
-			printStrings(strings);
-			printReverse(strings);
-			everyOther(strings);
+			//printStrings(strings);
+		//printReverse(strings);
+			//everyOther(strings);
+			randomString(strings);
 		}
 
 
@@ -45,6 +49,14 @@ public class MoreArrayFun {
 
     //5. Write a method that takes an array of Strings and prints all the Strings in the array
     //   in a completely random order. Almost every run of the program should result in a different order.
-			//ON THIS ONE, HAVEN'T STARTED IT YETTTTTTTTTTTTTTTT
+			static void randomString(String [] hi) {
+				ArrayList <String> list=new ArrayList(Arrays.asList(hi));
+				for(int i=list.size(); i>0; i--) {
+					Random rand=new Random();
+					int randString=rand.nextInt(list.size());
+					System.out.println(list.get(randString));
+					list.remove(randString);
+				}
+			}
 
 }

@@ -24,4 +24,8 @@ public class Spark {
         yVelocity = -30;
         xVelocity = 0;
     }
+
+	public Spark() {
+		// TODO Auto-generated constructor stub
+	}
 }
