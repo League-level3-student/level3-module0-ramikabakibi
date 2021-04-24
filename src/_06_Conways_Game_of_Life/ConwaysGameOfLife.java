@@ -36,9 +36,10 @@ public class ConwaysGameOfLife extends JPanel implements ActionListener{
         //build the window and start the simulation
         //setPreferredSize(new Dimension(WIDTH, HEIGHT));
         setLayout(new BorderLayout());
-        //HOW DO I START SIMULATION
+        
         window = new JFrame("Conway's Game Of Life");
         window.add(this);
+        gamePanel = new WorldPanel(WIDTH, HEIGHT, CELLS_PER_ROW);
         gamePanel.setPreferredSize(new Dimension(WIDTH, HEIGHT));
         inputPanel = new JPanel();
         startStopButton = new JButton("START");
@@ -58,7 +59,7 @@ public class ConwaysGameOfLife extends JPanel implements ActionListener{
         inputPanel.add(clearButton);
         add(inputPanel, BorderLayout.NORTH);
 
-        gamePanel = new WorldPanel(WIDTH, HEIGHT, CELLS_PER_ROW);
+        
         add(gamePanel, BorderLayout.CENTER);
 
         window.pack();
