@@ -47,11 +47,11 @@ public class TheWrongWayCowTest {
       "cowc".toCharArray(),
       "cowo".toCharArray(),
       "coww".toCharArray(),
-      "cow.".toCharArray(),
+      "woc.".toCharArray(),
       };
-    assertArrayEquals(new int[]{3,0}, TheWrongWayCow.findWrongWayCow(show(field)));
+    assertArrayEquals(new int[]{3,2}, TheWrongWayCow.findWrongWayCow(show(field)));
   }
-
+//flipped
   @Test
   public void ex1() {
     final char[][] field = new char[][] {
@@ -60,9 +60,9 @@ public class TheWrongWayCowTest {
       "cow.woc.cow.cow.cow".toCharArray(),
       "cow.cow.cow.cow.cow".toCharArray(),
       };
-    assertArrayEquals(new int[]{6,2}, TheWrongWayCow.findWrongWayCow(show(field)));
+    assertArrayEquals(new int[]{2,6}, TheWrongWayCow.findWrongWayCow(show(field)));
   }
-
+//flipped
   @Test
   public void ex2() {
     final char[][] field = new char[][] {
@@ -72,9 +72,9 @@ public class TheWrongWayCowTest {
       "....w.o....".toCharArray(),
       "......w.cow".toCharArray()
       };
-    assertArrayEquals(new int[]{8,4}, TheWrongWayCow.findWrongWayCow(show(field)));
+    assertArrayEquals(new int[]{4,8}, TheWrongWayCow.findWrongWayCow(show(field)));
   }
-
+//flipped, here the cow is written just cow
   @Test
   public void aFieldFullOfJunk() {
     final char[][] field = new char[][] {
@@ -87,9 +87,9 @@ public class TheWrongWayCowTest {
       " dfhdu 880-23fjdlfkjlkjlkjfljf".toCharArray(),
       ";d43-02- -340-2394 39-099kk;ld".toCharArray()
     };
-    assertArrayEquals(new int[]{29,0}, TheWrongWayCow.findWrongWayCow(show(field)));
+    assertArrayEquals(new int[]{0,29}, TheWrongWayCow.findWrongWayCow(show(field)));
   }
-
+//flipped, here the cow is written cow vertically like the one below
   @Test 
   public void wwcW() {
     final char[][] field = new char[][] {
@@ -110,8 +110,11 @@ public class TheWrongWayCowTest {
       "cowcowcowcowcowcowcowcowcowcowcowcowcowcowcowcow".toCharArray(),
       "cowcowcowcowcowcowcowcowcowcowcowcowcowcowcowcow".toCharArray()
     };
-    assertArrayEquals(new int[]{9,5}, TheWrongWayCow.findWrongWayCow(show(field)));
+    assertArrayEquals(new int[]{5,9}, TheWrongWayCow.findWrongWayCow(show(field)));
   }
+  //flipped, here the cow is written C
+  //                                 O
+  //                                 W at the specified coordinate
 
 @Test
 public void wwcE() {
@@ -133,8 +136,9 @@ public void wwcE() {
     "wocwocwocwocwocwocwocwocwocwoc".toCharArray(),
     "wocwocwocwocwocwocwocwocwoccow".toCharArray()
   };
-  assertArrayEquals(new int[]{27,15}, TheWrongWayCow.findWrongWayCow(show(field)));
+  assertArrayEquals(new int[]{15,27}, TheWrongWayCow.findWrongWayCow(show(field)));
 }
+//flipped, here the cow is written cow at the last possible three letters, bottom right
 
 @Test
 public void wwcN() {
@@ -155,9 +159,9 @@ public void wwcN() {
   "oooooooooooooooooooooooooooooo".toCharArray(),
   "wwwwwwwwwwwwwwwwwwwwwwwwwwwwww".toCharArray()
   };
-  assertArrayEquals(new int[]{14,8}, TheWrongWayCow.findWrongWayCow(show(field)));
+  assertArrayEquals(new int[]{8,14}, TheWrongWayCow.findWrongWayCow(show(field)));
 }
-
+//flipped
 @Test
 public void wwcS() {
   final char[][] field = new char[][] {
@@ -183,9 +187,9 @@ public void wwcS() {
     "oooooooooooooooooooooooooooooo".toCharArray(),
     "cccccccccccccccccccccccccccccc".toCharArray()
   };
-  assertArrayEquals(new int[]{3,4}, TheWrongWayCow.findWrongWayCow(show(field)));
+  assertArrayEquals(new int[]{4,3}, TheWrongWayCow.findWrongWayCow(show(field)));
 }
-
+//flipped
 @Test 
 public void mostlyEmpty() {
   final char[][] field = new char[][] {
